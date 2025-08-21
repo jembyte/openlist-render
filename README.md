@@ -1,9 +1,9 @@
 # openlist-render
-OpenList Render Cloud deployment template
+OpenList Render Cloud deployment template with custom database
 
 ### Environment variable
 
-**Set admin password**
+**Set admin password** if there was no password in the database previously
 
     OPENLIST_ADMIN_PASSWORD="PASSWD_HERE"
 
@@ -19,6 +19,4 @@ OpenList Render Cloud deployment template
 
 **Default env**
 
-    PUID=0
-    PGID=0
     UMASK=022
