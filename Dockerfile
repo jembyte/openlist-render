@@ -4,7 +4,12 @@ LABEL MAINTAINER="OpenList"
 
 WORKDIR /opt/openlist/
 
-COPY --chown=1001:1001 --chmod=644 config.json data/
+COPY --chmod=644 config.json data/
+
+USER root
+RUN chown -R openlist:openlist /opt/openlist
+
+USER openlist
 
 ENV UMASK=022
 VOLUME /opt/openlist/data/
