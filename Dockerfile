@@ -1,4 +1,4 @@
-FROM openlistteam/openlist:v4.1.3-lite
+FROM openlistteam/openlist:v4.1.4-lite
 
 LABEL MAINTAINER="OpenList"
 
