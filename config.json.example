@@ -2,9 +2,13 @@
   "cdn": "https://cdn.jsdelivr.net/npm/@openlist-frontend/openlist-frontend@$version/dist/lite",
   "database": {
     "type": "postgres",
+    "host": "aws-1-ap-southeast-1.pooler.supabase.com",
+    "port": 5432,
+    "user": "postgres.xxxxxxxxxxxxxxxxxxxx",
+    "password": "YourPasswdHere",
+    "name": "postgres",
     "table_prefix": "x_",
-    "ssl_mode": "prefer",
-    "dsn": "postgresql://[DB_USER]:[DB_PASSWD]@[DB_HOST]:[DB_PORT]/[DB_NAME]"
+    "ssl_mode": "prefer"
   },
   "scheme": {
     "address": "0.0.0.0",
