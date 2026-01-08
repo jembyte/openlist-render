@@ -1,4 +1,4 @@
-FROM openlistteam/openlist:v4.1.8-lite
+FROM openlistteam/openlist:v4.1.9-lite
 
 LABEL MAINTAINER="OpenList"
 
@@ -13,5 +13,5 @@ USER openlist
 
 ENV UMASK=022
 VOLUME /opt/openlist/data/
-EXPOSE 5244 5244
+EXPOSE 5244 5245
 CMD [ "/entrypoint.sh" ]
