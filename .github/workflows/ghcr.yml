@@ -43,11 +43,13 @@ jobs:
       # Build the image based on your repository's `Dockerfile`.
       - name: Build Docker image
         run: |
-          docker build . -t ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:${{ inputs.imgversion }}
+          docker build . -t ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:${{ inputs.imgversion }} \
+                         -t ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
 
       # Push docker image to the Container registry.
       - name: Push Docker image
         run: |
           docker push ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:${{ inputs.imgversion }}
+          docker push ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
 
 
